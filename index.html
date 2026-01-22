@@ -1,113 +1,216 @@
-<!DOCTYPE html>  <html>  
-<head>  
-<meta charset="UTF-8">  
-<title>My Web Dev Journey</title>
-   <style>  
-body {  
-background-color: #1a1a1a;  
-color: white;  
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
-text-align: center;  
-margin: 0;  
-padding: 20px;  
-display: flex;  
-flex-direction: column;  
-align-items: center;  
-min-height: 100vh;  
-}  
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MIRACLE PORTFOILO</title>
 
-.profile-card {  
-background-color: white;  
-color: #333;  
-max-width: 400px;  
-width: 90%;  
-margin-top: 40px;  
-padding: 35px;  
-border-radius: 25px;  
-box-shadow: 0px 15px 35px rgba(0,0,0,0.6);  
-}  
+<style>
+/* WHOLE SCREEN SETUP */
+body {
+background-color: #3b1212;
+color: #FFF;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-s
+text-align: center;
+margin: 0;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+}
+/* FLOATING PROFILE CARD*/
+.profile-card {
+background-color: #c89b3c;
+color: #FFF;
+max-width: 400px;
+width: 90%;
+margin-top: 40px;
+padding: 35px;
+border-radius: 25px;
+box-shadow: 0px 15px 35px rgba(0,0,0,0.6);
+}
+/* THE INTERACTIVE IMAGE */
+img {
+width: 150px;
+height: 150px;
+border-radius: 30%;
+border: 5px solid #ff8c00;
+object-fit: cover;
+margin-bottom: 15px;
+transition: 0.4s ease;
+}
+img:hover {
+transform: scale(1.1) rotate(3deg);
+}
+/* MAKES TEXT IN BLOCKS*/
+a {
+display: block;
+background-color:#ff8c00;
+color: white;
+padding: 15px;
+margin: 15px 0;
+text-decoration: none;
+border-radius: 50px;
+font-weight: bold;
+transition: 0.3s;
+}
+/* The magic hover */
+a:hover {
+background-color: #a87f2f;
+transform: translateY(-3px);
+box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
 
-img {  
-width: 150px;  
-height: 150px;  
-border-radius: 50%;  
-border: 5px solid #007bff;  
-object-fit: cover;  
-margin-bottom: 15px;  
-transition: 0.4s ease;  
-}  
+h1 { margin-bottom: 5px; }
+h2 { color: #007bff; font-size: 1.2rem; margin-top: 20px
+p { line-height: 1.6; }
+hr { border: 0; border-top: 1px solid #eee; margin: 20px
+.top-nav {
+position: fixed;        /* MAGIC: This makes it stay at
+top: 0;
+left: 0;
+width: 100%;
+background-color: #ff8c00;
+color:#007bff;
+padding: 15px 0;
+font-weight: bold;
+display: flex;
+justify-content: space-around;
+align-items: center;
+z-index: 1000;          /* Ensures it stays on top of ev
+box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+}
 
-img:hover {  
-transform: scale(1.1) rotate(3deg);  
-}  
+.status-dot {
+background: #28a745;    /* Green color */
+border: none;
+border: none
+color: #FFF;
+padding: 5px 10px;
+border-radius: 20px;
+font-size: 0.8rem;
+animation: blink 1.5s infinite; /* Bonus: Making it blin
+}
+@keyframes blink {
+0% { opacity: 1; }
+50% { opacity: 0.5; }
+100% { opacity: 1; }
+}
+}
+}
+}
+/* 1. Styling the Stats Bar */
+.stats-container {
+display: flex;
+justify-content: space-around;
+background: #007bff;
+padding: 15px;
+border-radius: 15px;
+margin: 20px 0;
+}
 
-a {  
-display: block;  
-background-color: #007bff;  
-color: white;  
-padding: 15px;  
-margin: 15px 0;  
-text-decoration: none;  
-border-radius: 50px;  
-font-weight: bold;  
-transition: 0.3s;  
-}  
+.stat {
+display: flex;
+flex-direction: column;
+}
+.stat strong {
+font-size: 1.2rem;
+color: #007bff;
+}
 
-a:hover {  
-background-color: #0056b3;  
-transform: translateY(-3px);  
-box-shadow: 0px 5px 15px rgba(0,0,0,0.3);  
-}  
+.stat span {
+font-size: 0.7rem;
+text-transform: uppercase;
+color: #FFF;
+}
 
-h1 { margin-bottom: 5px; }  
-h2 { color: #007bff; font-size: 1.2rem; margin-top: 20px; }  
-p { line-height: 1.6; }  
-hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }  
+/* 2. THE MOBILE MAGIC (Media Query) */
+@media (max-width: 480px) {
+.profile-card {
+width: 95%;      /* Takes up more space on small phones */
+padding: 20px;   /* Shrinks padding so text doesn't choke */
+}
 
-</style> 
- </head> 
-  <body>    
-  <h1>My Web Dev Journey</h1>   
-  <div class="profile-card">
-    <img src="miracle.jpeg" alt="Miracle's Picture">  
+h1 { font-size: 1.5rem; } /* Makes name fit on one line */
+}
+}
+}
 
-<h1 style="color: #1a1a1a;">MIRACLE CHIKA</h1>  
-<p>Aspiring Front-End Developer | Tech Lead</p>  
+</style>
+<!-- This puts an emoji or icon in your browser tab! -->
+<link rel="icon" href="https://fav.farm/🔥">
+</head>
+<body>
+<header class="top-nav">
+<span>MIRACOOL'S PORTFOILO 2026</span>
+<button class="status-dot">Active</button>
+</header>
 
-<hr>  
+<h1>My Web Dev Journey</h1>
 
-<h2>About Me</h2>  
-<p>  
-I am a passionate tech enthusiast currently learning   
-Front-End Development. I love turning complex ideas into simple, beautiful websites.  
-</p>  
+<div class="profile-card">
+
+<img src="miracle.jpeg" alt="miracle's Picture">
+
+<h1 style="color: #1a1a1a;">Miracle</h1>
+<p>Aspiring Front-End Developer | Tech Lead</p>
+
+<hr>
+<h2>About Me</h2>
+<p>
+I am a passionate tech enthusiast currently learning
+Front-End Development. I love turning complex ideas into simple, bea
+</p>
+<hr>
 <div class="stats-container">
-  <div class="stat">
-      <strong>3</strong>
-          <span>Days</span>
-            </div>
-              <div class="stat">
-                  <strong>12</strong>
-                      <span>Projects</span>
-                        </div>
-                          <div class="stat">
-                              <strong>100%</strong>
-                                  <span>Focus</span>
-                                    </div>
-                                    </div>
-<hr>  
-
-<h2>Connect With Me</h2>  
-<a href="mailto:chiikadollarmiracle@gmail.com">📧 Email Me</a>  
-<a href="https://github.com/Troublecodm" target="_blank">💻 GitHub Profile</a>  
-<a href="https://x.com/miracool999" target="_blank">🐦 Follow Me</a>  
-<a href="https://wa.me/2349133180288">📱 WhatsApp Me</a>
-<a href="https://www.tiktok.com/@miracoolchi" target="_blank">🎵 TikTok</a>
-<a href="https://t.me/@xmbminers" target="_blank">✈️ Telegram</a>
+<div class="stat">
+<strong>3</strong>
+<span>10 Days</span>
+</div>
+<div class="stat">
+<strong>12</strong>
+<span>Projects</span>
+</div>
+<div class="stat">
+<strong>100%</strong>
+<span>Focus</span>
+</div>
+</div>
+<hr>
 <details class="brand-wrap">
- <summary>BIO</summary>
- <div class="content">
- <p>Front-end web development enthusiast 📚💻 | Learning the ropes of coding one line at a time | T
-  </p>
-</div>  </body>  
-</html> 
+<summary>BIO</summary>
+<div class="content">
+<p>Front-end web development enthusiast 📚💻 | Learning the ropes o
+</p>
+<hr>
+<h2>Connect With Me</h2>
+<a href="mailto:chiikadollarmiracle@gmail.com">📧 Email Me</a>
+<a href="https://github.com/Troublecodm" target="_blank">💻 GitHub P
+<a href="https://x.com/miracool999" target="_blank">🐦 Follow Me</a>
+<a href="https://wa.me/2349133180288">📱 WhatsApp Me</a>
+<a href="https://www.tiktok.com/@miracoolchi" target="_blank">
+🎵 Follow me on TikTok
+</a>
+<a href="https://t.me/@miracooln" target="_blank">
+💬 Telegram
+</a>
+</div>
+
+</body>
+</html>
+</html>
+}
+}
+}
+}
+}
+}
+}
+}
+}}}
+}
+}
+}
+}
+}
+}
