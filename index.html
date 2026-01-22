@@ -1,112 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>MIRACLE PORTFOILO</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio | Day 3 Catch-Up</title>
 <style>
-/* WHOLE SCREEN SETUP */
+/* 1. Global Setup */
 body {
-background-color: #3b1212;
-color: #FFF;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-s
+background-color: #1a1a1a;
+color: white;
+font-family: 'Segoe UI', sans-serif;
 text-align: center;
 margin: 0;
-padding: 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-min-height: 100vh;
-}
-/* FLOATING PROFILE CARD*/
-.profile-card {
-background-color: #c89b3c;
-color: #FFF;
-max-width: 400px;
-width: 90%;
-margin-top: 40px;
-padding: 35px;
-border-radius: 25px;
-box-shadow: 0px 15px 35px rgba(0,0,0,0.6);
-}
-/* THE INTERACTIVE IMAGE */
-img {
-width: 150px;
-height: 150px;
-border-radius: 30%;
-border: 5px solid #ff8c00;
-object-fit: cover;
-margin-bottom: 15px;
-transition: 0.4s ease;
-}
-img:hover {
-transform: scale(1.1) rotate(3deg);
-}
-/* MAKES TEXT IN BLOCKS*/
-a {
-display: block;
-background-color:#ff8c00;
-color: white;
-padding: 15px;
-margin: 15px 0;
-text-decoration: none;
-border-radius: 50px;
-font-weight: bold;
-transition: 0.3s;
-}
-/* The magic hover */
-a:hover {
-background-color: #a87f2f;
-transform: translateY(-3px);
-box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+padding: 100px 20px 40px 20px;
 }
 
-h1 { margin-bottom: 5px; }
-h2 { color: #007bff; font-size: 1.2rem; margin-top: 20px
-p { line-height: 1.6; }
-hr { border: 0; border-top: 1px solid #eee; margin: 20px
+/* 2. The Sticky Header (Day 3 Lesson) */
 .top-nav {
-position: fixed;        /* MAGIC: This makes it stay at the top*/
-
+position: fixed;
 top: 0;
 left: 0;
 width: 100%;
-background-color: #ff8c00;
-color:#007bff;
+background-color: #007bff;
+color: white;
 padding: 15px 0;
 font-weight: bold;
 display: flex;
 justify-content: space-around;
 align-items: center;
-z-index: 1000;          /* Ensures it stays on top of evwrything*/
-
+z-index: 1000;
 box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
 }
 
 .status-dot {
-background: #28a745;    /* Green color */
+background: #28a745;
 border: none;
-border: none
-color: #FFF;
-padding: 5px 10px;
+color: white;
+padding: 5px 12px;
 border-radius: 20px;
 font-size: 0.8rem;
 animation: blink 1.5s infinite;
- /* Bonus: Making it blink*/
 }
+
 @keyframes blink {
 0% { opacity: 1; }
 50% { opacity: 0.5; }
 100% { opacity: 1; }
 }
+
+/* 3. The Profile Card (Day 1 & 2 combined) */
+.profile-card {
+background-color: white;
+color: #333;
+max-width: 400px;
+width: 90%;
+margin: 0 auto;
+padding: 30px;
+border-radius: 25px;
+box-shadow: 0px 15px 35px rgba(0,0,0,0.5);
 }
+
+img {
+width: 130px;
+height: 130px;
+border-radius: 50%;
+border: 4px solid #007bff;
+object-fit: cover;
+margin-bottom: 15px;
 }
+
+/* 4. Interactive Buttons */
+a {
+display: block;
+background-color: #007bff;
+color: white;
+padding: 14px;
+margin: 12px auto;
+text-decoration: none;
+border-radius: 50px;
+font-weight: bold;
+transition: 0.3s;
 }
+
+a:hover {
+background-color: #0056b3;
+transform: translateY(-3px);
+box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
 /* 1. Styling the Stats Bar */
 .stats-container {
 display: flex;
 justify-content: space-around;
-background: #007bff;
+background: #f8f9fa;
 padding: 15px;
 border-radius: 15px;
 margin: 20px 0;
@@ -116,6 +103,7 @@ margin: 20px 0;
 display: flex;
 flex-direction: column;
 }
+
 .stat strong {
 font-size: 1.2rem;
 color: #007bff;
@@ -124,7 +112,7 @@ color: #007bff;
 .stat span {
 font-size: 0.7rem;
 text-transform: uppercase;
-color: #FFF;
+color: #888;
 }
 
 /* 2. THE MOBILE MAGIC (Media Query) */
@@ -135,14 +123,27 @@ padding: 20px;   /* Shrinks padding so text doesn't choke */
 }
 
 h1 { font-size: 1.5rem; } /* Makes name fit on one line */
+}
 </style>
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 <!-- This puts an emoji or icon in your browser tab! -->
 <link rel="icon" href="https://fav.farm/🔥">
 </head>
 <body>
 <header class="top-nav">
-<span>MIRACOOL'S PORTFOILO 2026</span>
-<button class="status-dot">Active</button>
 </header>
 
 <h1>My Web Dev Journey</h1>
@@ -189,9 +190,9 @@ Front-End Development. I love turning complex ideas into simple, bea
 </a>
 </div>
 <details class="brand-wrap">
- <summary>BIO</summary>
- <div class="content">
- <p>Front-end web development enthusiast 📚💻 | Learning the ropes of coding one line at a time | T
-  </p>
+<summary>BIO</summary>
+<div class="content">
+<p>Front-end web development enthusiast 📚💻 | Learning the ropes of coding one line at a time | T
+</p>
 </body>
 </html>
